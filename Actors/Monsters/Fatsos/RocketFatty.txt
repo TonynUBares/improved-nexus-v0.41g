@@ -1,32 +1,32 @@
 actor Rockebus : Fatso 25617
 {
-  Health 1400
-  Scale 1.1
-  Monster
-  Painchance 40
-  DamageFactor "BeheComet", 0.0
-  DamageFactor "FatFlamer", 0.0
-  Species "Fatsos"
-  SeeSound "Rockebus/See"
-  PainSound "Rockebus/Pain"
-  DeathSound "Rockebus/Death"
-  ActiveSound "manc/idle"
-  Obituary "%o couldn't dodge the Rockebus' rocket spam."
-  Tag "$NERockebus"
-  DropItem "BossLifeEssence" 128 25
-  DropItem "BossArmorBonusMax" 128 1
-  DropItem "MissileBox" 200
-  DropItem "Missile" 256
-  DropItem "Missile" 256
-  DropItem "RocketLauncher" 100 1
-  DropItem "HomingRocketLauncher" 100 1
-  MONSTER
-  +FLOORCLIP
-  +MISSILEMORE
-  +MISSILEEVENMORE
-  +QUICKTORETALIATE
-  States
-  {
+ Health 1400
+ Scale 1.1
+ Monster
+ Painchance 40
+ DamageFactor "BeheComet", 0.0
+ DamageFactor "FatFlamer", 0.0
+ Species "Fatsos"
+ SeeSound "Rockebus/See"
+ PainSound "Rockebus/Pain"
+ DeathSound "Rockebus/Death"
+ ActiveSound "manc/idle"
+ Obituary "%o couldn't dodge the Rockebus' rocket spam."
+ Tag "$NERockebus"
+ DropItem "BossLifeEssence" 128 25
+ DropItem "BossArmorBonusMax" 128 1
+ DropItem "MissileBox" 200
+ DropItem "Missile" 256
+ DropItem "Missile" 256
+ DropItem "RocketLauncherGiver" 100 1
+ DropItem "HomingRocketLauncherGiver" 100 1
+ MONSTER
+ +FLOORCLIP
+ +MISSILEMORE
+ +MISSILEEVENMORE
+ +QUICKTORETALIATE
+ States
+ {
   Spawn:
 	TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ModifyMonster",0,1)
 	Goto Idle

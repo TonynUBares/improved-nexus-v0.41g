@@ -201,210 +201,68 @@ Actor AIPatroling : AIStrafing
 
 Actor StrafeSens : Inventory{Inventory.MaxAmount 1}
 
-Actor MarineBulletPuff : ModdedBulletPuff Replaces ModdedBulletPuff {DamageType "Marine" +MTHRUSPECIES}
-Actor MThrownGrenade : ThrownGrenade {Damagetype "Players"}
-
-ACTOR MarineThrownMine
+Actor MarineBulletPuff : ModdedBulletPuff Replaces ModdedBulletPuff 
 {
- Scale 0.85
- Radius 14
- Height 10
- Speed 15
- Damage 1
- Mass 0x7FFFFFFF
- SeeSound "weapons/minebounce"
- Species "Player"
- +MISSILE
- +THRUSPECIES
+ DamageType "Marine"
  +MTHRUSPECIES
- +CANBOUNCEWATER
- +HEXENBOUNCE
- +NOTELEPORT
- +BOUNCEONACTORS
- +DONTHARMSPECIES
- +DROPOFF
- BounceCount 3
- BounceFactor 0.18
- WallBounceFactor 0.22
+ +FRIENDLY
+}
+
+Actor MThrownGrenade : ThrownGrenade 
+{
+ +FRIENDLY
+ Damagetype "Players"
+}
+
+ACTOR MarineThrownMine: ThrownMine
+{
+ +FRIENDLY
  Damagetype "Players"
  States
  {
   Spawn:
-	TNT1 A 0
-	TNT1 A 0 A_StopSound
-	Goto Thrown
-  Thrown:
-	LMIN A 30
-	LMIN B 10 Bright
+	LMIN AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_CheckFloor("Death")
+	LMIN BBBBBBBBBB 1 Bright A_CheckFloor("Death")
+	TNT1 A 0 A_CountDown
 	Loop
   Death:
-	LMIN A 1
-	LMIN A 1 A_SpawnItem("MarineLiveMine")
+	TNT1 A 0 A_Stop
+	TNT1 A 0 A_Scream
+	TNT1 A 0 A_ChangeFlag(NOINTERACTION,1)
+	LMIN A 1 A_CustomMissile("MarineLiveMine",0,0,0,CMF_AIMDIRECTION|CMF_TRACKOWNER)
+	TNT1 A 5 A_AlertMonsters(128)
 	Stop
  }
 }
 
-ACTOR MarineLiveMine
+ACTOR MarineLiveMine: LiveMine
 {
- Scale 0.85
- Radius 10
- Height 8
- Damage 1
- Health 1
- Mass 0x7FFFFFFF
- Species "Player"
+ +FRIENDLY
  Damagetype "Players"
- +MISSILE
- +THRUSPECIES
- +FORCERADIUSDMG
- +MOVEWITHSECTOR
- +DONTHARMSPECIES
- +NOBLOOD
- +SHOOTABLE
- var int user_counter;
- States
- {
-  Spawn:
-	TNT1 A 0
-	TNT1 A 0 A_JumpIf(user_counter >= 35,"Death")
-	TNT1 A 0 A_SetUserVar("user_counter",user_counter + 1)
-	LMIN A 30 A_ChangeFlag(NOBLOCKMAP,0)
-	LMIN B 10 Bright A_ChangeFlag(NOBLOCKMAP,1)
-	Loop
-  Death:
-	TNT1 A 0 A_Die
-  Explode:
-	LMIN B 15 Bright A_PlaySound("weapons/minebeep")
-	TNT1 A 0 A_AlertMonsters
-	//TNT1 A 0 A_Explode(186,162)
-	TNT1 A 0 A_CustomMissile("MarineLiveMineBomb",0,0,0,CMF_AIMDIRECTION)
-	TNT1 A 0 A_PlaySound("weapons/mineexplode")
-	TNT1 A 0 A_SpawnItemEx("OrangeParticleSpawner", 0, 0, 0, 0, 0, 0, 0, 128)
-	TNT1 AAAA 0 A_CustomMissile("Kaboom3", 0, 0, random(0,360), 2, random(20,160))
-	TNT1 AAAA 0 A_CustomMissile("SmokeFX2", 0, 0, random(0,360), 2, random(20,160))
-	TNT1 AAAA 0 A_SpawnItemEx("Debris",0,0,0,Random(4,-4),Random(4,-4),Random(4,8),0,128)
-	TNT1 A 1 A_SpawnItem("RocketEx")
-	Stop
- }
 }
 
-Actor MarineLiveMineBomb
-{
- Projectile
- Speed 0
- Damage 0
- +NOCLIP
- +FORCERADIUSDMG
- DamageType "Players"
- States
- {
-  Spawn:
-	TNT1 A 1
-	TNT1 A 0 A_Explode(186,162)
-	Stop
- }
-}
 
-Actor MarineSpringMineSet
+Actor MarineSpringMineSet: SpringMineSet
 {
-Radius 12
-Height 9
-Speed 7
-+MOVEWITHSECTOR
-+MISSILE
-+DROPOFF
-+NOBLOCKMAP
-+NOTELEPORT
-+THRUACTORS
-+CANBOUNCEWATER
-Damagetype "Players"
-BounceType "Grenade"
-BounceCount 3
-Reactiontime 525
-BounceSound "MINBNC"
-States
+ +FRIENDLY
+ Damagetype "Players"
+ States
 {
   Spawn:
 	SPMN A 1 Bright A_CountDown
 	Loop
   Death:
-	TNT1 A 1 A_JumpIf(ACS_NamedExecuteWithResult("InfiniteInventoryCheck") == 2,"Cheater")
+	TNT1 A 0 A_Stop
+	TNT1 A 1 A_ChangeFlag(NOINTERACTION,1)
 	TNT1 A 1 Bright A_CustomMissile("MarineSpringMineActive",0,0,0,CMF_AIMDIRECTION|CMF_TRACKOWNER)
 	Stop
-  Cheater:
-	TNT1 A 1 Bright A_CustomMissile("CheaterSpringMineActive",0,0,0,CMF_AIMDIRECTION|CMF_TRACKOWNER)
-	Stop
  }
 }
 
-Actor MarineSpringMineActive
+Actor MarineSpringMineActive: SpringMineActive
 {
- Projectile
- Radius 12
- Height 9
- Mass 1000000
- Speed 0
- WallBounceFactor 0.16
- BounceFactor 0.36
- BounceType "Grenade"
- +DROPOFF
- +FLOORCLIP
- +NOTELEPORT
- +FRIENDLY
- +NODAMAGE
- +BRIGHT
- +FORCEPAIN
- -NOGRAVITY
- +MOVEWITHSECTOR
- +FORCERADIUSDMG
- +DONTHARMSPECIES
- +THRUACTORS
- +CANBOUNCEWATER
- Species "Player"
- Damagetype "Players"
  Obituary "$DrMarineSprintMineObit"
  Tag "$DrMarineSprintMine"
- var int user_counter;
- States
- {
-  Spawn:
-	SPMN A 0
-	TNT1 A 0 A_RearrangePointers(AAPTR_NULL, AAPTR_TARGET, AAPTR_NULL)
-	TNT1 A 0 A_PlaySound("SMNSET1")
-	SPMN A 20
-	TNT1 A 0 A_PlaySound("SMNSET2")
-	SPMN AD 1
-  SpawnLoop:
-	SPMN ADAD 1 A_LookEx(LOF_NOSOUNDCHECK|LOF_NOSEESOUND,0,100,0,360,"Attack")
-	TNT1 A 0 A_JumpIf(user_counter >= 300,"Attack")
-	TNT1 A 0 A_SetUserVar("user_counter",user_counter + 1)
-	Loop
-  Attack:
-	SPMN ABC 2
-	TNT1 A 0 A_RearrangePointers(AAPTR_MASTER, AAPTR_DEFAULT, AAPTR_DEFAULT)
-	TNT1 A 0 ThrustThingZ(0,45,0,0)
-	TNT1 A 0 A_PlaySound("MINLNCH")
-	SPMN A 21
-	TNT1 A 0 A_PlaySound("SPRNMNXP")
-	TNT1 A 0 A_CustomMissile("MarineSpringMineActiveBomb",0,0,0,CMF_AIMDIRECTION)
-	//TNT1 A 0 A_Explode(Random(350,400),200,0,1,100)
-	TNT1 A 10 A_SpawnItemEx("WhiteProjExplodeLarge",0,0,0,0,0,0,0,SXF_CLIENTSIDE|SXF_NOCHECKPOSITION,0)
-	Stop
-  Vanish:
-	SPMN ADADADADADAD 1 A_FadeOut(0.1,1)
-	Stop
- }
-}
-
-Actor MarineSpringMineActiveBomb : MarineLiveMineBomb
-{
-States
-{
-  Spawn:
-	TNT1 A 1
-	TNT1 A 0 A_Explode(Random(350,400),200,0,1,100)
-    Stop
-  }
 }
 
 Actor UACGuyAR : UACBaseMarine

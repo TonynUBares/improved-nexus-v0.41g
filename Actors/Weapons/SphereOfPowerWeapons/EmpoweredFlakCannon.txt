@@ -1,6 +1,6 @@
-ACTOR "Empowered Flak Cannon" : "Flak Cannon"
+ACTOR EmpoweredFlakCannon : FlakCannon
 {
- Tag "Empowered Flak Cannon"
+ Tag "$NEEmpFlak"
  Radius 20
  Weapon.Kickback 50
  Weapon.SelectionOrder 400
@@ -10,7 +10,7 @@ ACTOR "Empowered Flak Cannon" : "Flak Cannon"
  Weapon.AmmoType2 "Missile"
  Weapon.AmmoUse2 5
  Weapon.KickBack 5
- Weapon.SisterWeapon "Flak Cannon"
+ Weapon.SisterWeapon "FlakCannon"
  DamageType SSG
  +WEAPON.NOAUTOFIRE
  +WEAPON.NOAUTOAIM

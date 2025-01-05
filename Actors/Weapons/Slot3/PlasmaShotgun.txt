@@ -5,9 +5,9 @@ Actor PlasmaShotgunGiver : CustomInventory
   Inventory.MaxAmount 0
   Inventory.InterHubAmount 0
   Inventory.PickupSound "DTShotgun/Pickup"
-  Inventory.PickupMessage "You got the Plasma Shotgun!"
+  Inventory.PickupMessage "$NEPlShotPick"
   Obituary "imagine playing deathmatch."
-  Tag "Plasma Shotgun"
+  Tag "$NEPlShot"
   States
   {
   Spawn:
@@ -16,9 +16,9 @@ Actor PlasmaShotgunGiver : CustomInventory
 	STBE A -1
 	Loop
   Pickup:
-	TNT1 A 0 A_JumpIfInventory("Plasma Shotgun",1,"JustAmmo")
+	TNT1 A 0 A_JumpIfInventory("PlasmaShotgun",1,"JustAmmo")
   All:
-	TNT1 A 0 A_GiveInventory("Plasma Shotgun",1)
+	TNT1 A 0 A_GiveInventory("PlasmaShotgun",1)
 	TNT1 A 0 A_JumpIfInventory("PlasmaShotgunGiverCheck",1,"HoldAndDestroy")
 	TNT1 A 0 A_GiveInventory("PlasmaShotgunGiverCheck",1)
 	TNT1 A 0 A_GiveInventory("NewCell",40)
@@ -27,7 +27,7 @@ Actor PlasmaShotgunGiver : CustomInventory
     TNT1 A 0 A_JumpIfInventory("PlasmaShotgunGiverCheck",1,"Null")
 	TNT1 A 0 A_GiveInventory("PlasmaShotgunGiverCheck",1)
 	TNT1 A 0 A_GiveInventory("NewCell",40)
-	TNT1 A 0 A_SpawnItemEx("Plasma Shotgun")
+	TNT1 A 0 A_SpawnItemEx("PlasmaShotgun")
 	Stop
   }
 }
@@ -48,24 +48,24 @@ Actor PlasmaShotgunGiverCheck : Inventory { Inventory.Amount 1 Inventory.MaxAmou
 
 
 
-Actor "Plasma Shotgun" : Weapon
+Actor PlasmaShotgun : Weapon
 {
-Tag "Plasma Shotgun"
-Weapon.AmmoType "NewCell"
-Weapon.AmmoUse 10
-Weapon.AmmoGive 80
-Weapon.SlotNumber 3
-  Weapon.SlotPriority 5.1
-Weapon.PreferredSkin "CombatSG-Marine"
-Inventory.PickupMessage "Plasma Shotgun"
-Obituary "%o got turned into a spec of dust by %k's Plasma Shotgun"
-AttackSound "plasmashotgun/fire"
-Inventory.PickupSound "weapons/plasmashotgun/pump"
-Weapon.Upsound "weapons/plasmashotgun/pump"
-Decal DoomImpScorch
-+WEAPON.NOAUTOAIM
-States
-{
+ Tag "$NEPlShot"
+ Weapon.AmmoType "NewCell"
+ Weapon.AmmoUse 10
+ Weapon.AmmoGive 80
+ Weapon.SlotNumber 3
+ Weapon.SlotPriority 5.1
+ Weapon.PreferredSkin "CombatSG-Marine"
+ Inventory.PickupMessage "$NEPlShotPick"
+ Obituary "%o got turned into a spec of dust by %k's Plasma Shotgun"
+ AttackSound "plasmashotgun/fire"
+ Inventory.PickupSound "weapons/plasmashotgun/pump"
+ Weapon.Upsound "weapons/plasmashotgun/pump"
+ Decal DoomImpScorch
+ +WEAPON.NOAUTOAIM
+ States
+ {
   Spawn:
   	STBE X 0 NoDelay ACS_NamedExecuteWithResult("WeaponListCheck",3,0)
   SpawnLoop:

@@ -44,7 +44,7 @@ DropItem "ArmorPlate", 120
 DropItem "AmmoPack", 100
 DropItem "HandGrenadeAmmo", 200, 1
 DropItem "MineAmmo", 100, 1
-DropItem "Plasma Shotgun", 45, 1
+DropItem "PlasmaShotgunGiver", 45, 1
 DropItem "MarineBeacon" 25 1
 MaxStepHeight 32
 MaxDropOffHeight 32

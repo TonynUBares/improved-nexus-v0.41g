@@ -5,9 +5,9 @@ Actor FlakCannonGiver : CustomInventory
   Inventory.MaxAmount 0
   Inventory.InterHubAmount 0
   Inventory.PickupSound "DTShotgun/Pickup"
-  Inventory.PickupMessage "You got the Flak Cannon!"
+  Inventory.PickupMessage "$NEFlakPick"
   Obituary "imagine playing deathmatch."
-  Tag "Flak Cannon"
+  Tag "$NEFlak"
   States
   {
   Spawn:
@@ -16,9 +16,9 @@ Actor FlakCannonGiver : CustomInventory
   HFCW Z -1
   Loop
   Pickup:
-  TNT1 A 0 A_JumpIfInventory("Flak Cannon",1,"JustAmmo")
+  TNT1 A 0 A_JumpIfInventory("FlakCannon",1,"JustAmmo")
   All:
-  TNT1 A 0 A_GiveInventory("Flak Cannon",1)
+  TNT1 A 0 A_GiveInventory("FlakCannon",1)
   TNT1 A 0 A_JumpIfInventory("FlakCannonGiverCheck",1,"HoldAndDestroy")
   TNT1 A 0 A_GiveInventory("FlakCannonGiverCheck",1)
   TNT1 A 0 A_GiveInventory("NewShell",40)
@@ -27,30 +27,28 @@ Actor FlakCannonGiver : CustomInventory
 	TNT1 A 0 A_JumpIfInventory("FlakCannonGiverCheck",1,"Null")
   TNT1 A 0 A_GiveInventory("FlakCannonGiverCheck",1)
   TNT1 A 0 A_GiveInventory("NewShell",40)
-  TNT1 A 0 A_SpawnItemEx("Flak Cannon")
+  TNT1 A 0 A_SpawnItemEx("FlakCannon")
   Stop
   }
 }
 
 Actor FlakCannonSpawnerGiver : FlakCannonGiver
 {
-  States
-  {
+ States
+ {
   JustAmmo:
 	TNT1 A 0 A_JumpIfInventory("FlakCannonGiverCheck",1,"Null")
-  TNT1 A 0 A_GiveInventory("FlakCannonGiverCheck",1)
-  TNT1 A 0 A_GiveInventory("NewShell",40)
-  Stop
-  }
+	TNT1 A 0 A_GiveInventory("FlakCannonGiverCheck",1)
+	TNT1 A 0 A_GiveInventory("NewShell",40)
+	Stop
+ }
 }
 
 Actor FlakCannonGiverCheck : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 Inventory.InterHubAmount 0 }
 
-
-
-ACTOR "Flak Cannon" : Weapon 2052
+ACTOR FlakCannon : Weapon 2052
 {
-  Tag "Flak Cannon"
+  Tag "$NEFlak"
   Game Doom
   Decal "FlakChip"
   Radius 20
@@ -67,7 +65,7 @@ ACTOR "Flak Cannon" : Weapon 2052
   Weapon.SlotPriority 6.1
   +WEAPON.NOAUTOAIM
   +FORCEXYBILLBOARD
-  Inventory.PickupMessage "You found a flak cannon!"
+  Inventory.PickupMessage "$NEFlakPick"
   Obituary "%k caught %o in a flak attack"
   Inventory.PickupSound "flak/get"
   DamageType SSG

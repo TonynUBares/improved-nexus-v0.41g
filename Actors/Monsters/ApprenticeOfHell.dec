@@ -20,7 +20,7 @@ ACTOR Apprentice 31600
  +DEFLECT
  +NODAMAGETHRUST
  DropItem "UltraSphere", 256
- DropItem "Flak Cannon", 256
+ DropItem "FlakCannonGiver", 256
  DropItem "ShellBox", 256
  DropItem "RocketBox", 256
  DropItem "FuelCore" 256 1

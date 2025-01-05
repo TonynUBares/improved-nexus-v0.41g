@@ -1,9 +1,6 @@
 CLEARPLAYERCLASSES
 ADDPLAYERCLASS ComplexNexusPlayer
 
-ALIAS UseDemonChalice "Use NexusDemonicChalice"
-ALIAS UsePowerSkull "Use NexusSkullOfPower"
-
 //Actions
 ADDKEYSECTION "Nexus Actions" NexusActions
 

@@ -1,38 +1,38 @@
 actor SuperCacobus : Fatso 21677
 {
-Health 2000
-Scale 1.2
-Mass 1536
-Speed 12
-PainChance 36
-Monster
-+FLOORCLIP
-+MISSILEMORE
-+MISSILEEVENMORE
-+DONTHURTSPECIES
-+QUICKTORETALIATE
-SeeSound "CBcaco/see"
-PainSound "CBcaco/pain"
-DeathSound "CBcaco/death"
-ActiveSound "CBcaco/active"
-PainChance "SoulToxic", 30
-PainChance "FiendFire", 30
-DamageFactor "BeheComet", 0.0
-DamageFactor "FatFlamer", 0.0
-DropItem "BossLifeEssence" 250
-DropItem "BossArmorBonusMax" 250
-DropItem "BossLifeEssence" 180
-DropItem "BossArmorBonusMax" 180
-//DropItem "BFG15K" 128
-DropItem "Tech Vulcan" 200
-DropItem "DemonAmmoBox" 256
-DropItem "NewCellPack" 256
-DropItem "BrimstoneItem" 85
-Obituary "%o was flattened by a Super Cacobus."
-BloodColor "Blue"
-Species "Fatsos"
-Tag "$NESCacobus"
-Translation "48:79=176:191"
+ Health 2000
+ Scale 1.2
+ Mass 1536
+ Speed 12
+ PainChance 36
+ Monster
+ +FLOORCLIP
+ +MISSILEMORE
+ +MISSILEEVENMORE
+ +DONTHURTSPECIES
+ +QUICKTORETALIATE
+ SeeSound "CBcaco/see"
+ PainSound "CBcaco/pain"
+ DeathSound "CBcaco/death"
+ ActiveSound "CBcaco/active"
+ PainChance "SoulToxic", 30
+ PainChance "FiendFire", 30
+ DamageFactor "BeheComet", 0.0
+ DamageFactor "FatFlamer", 0.0
+ DropItem "BossLifeEssence" 250
+ DropItem "BossArmorBonusMax" 250
+ DropItem "BossLifeEssence" 180
+ DropItem "BossArmorBonusMax" 180
+ //DropItem "BFG15K" 128
+ DropItem "TechVulcanGiver" 200
+ DropItem "DemonAmmoBox" 256
+ DropItem "NewCellPack" 256
+ DropItem "BrimstoneItem" 85
+ Obituary "%o was flattened by a Super Cacobus."
+ BloodColor "Blue"
+ Species "Fatsos"
+ Tag "$NESCacobus"
+ Translation "48:79=176:191"
   States
   {
   Spawn:

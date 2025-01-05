@@ -1,5 +1,26 @@
 [enu default]
 
+//Weapon tags
+
+NETBlast = "Tech Blaster";
+NETVulc = "Tech Vulcan";
+NEFlak = "Flak Cannon";
+NEEmpFlak = "Empowered Flak Cannon";
+NELegC4 = "Legendary C4";
+NEPlShot = "Plasma Shotgun";
+
+//Weapon pickup message
+
+NETBlastPick = "Tech Blaster";
+NETVulcPick = "Tech Vulcan";
+NEFlakPick = "You got the Flak Cannon!";
+NELegC4Pick = "You got the ultimate Legendary C4! straight out of DE_DUST!";
+NEPlShotPick = "You got the Plasma Shotgun!";
+
+//Weapon obituaries
+
+NETBlastObit = "%o was turned into maccarroni by %k's Tech Blaster";
+
 //Monster tags
 
 //Spiders

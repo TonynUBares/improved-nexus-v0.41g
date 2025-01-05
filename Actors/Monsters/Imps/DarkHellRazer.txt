@@ -1,38 +1,38 @@
 ACTOR DarkHellRazer 21543
 {
-	Health 380
-	Radius 20
-	Height 56
-	Mass 100
-	Speed 8
-	Scale 1.1
-	PainChance 50
-	+FLOORCLIP
-	+DONTHARMSPECIES
-	+MISSILEMORE
-	+MISSILEEVENMORE
-	DamageFactor "ImpComet", 0.0
-	DropItem "LifeEssence" 256
-	DropItem "ArmorBonusMax" 256
-	DropItem "BossLifeEssence" 120
-    DropItem "BossArmorBonusMax" 120
-	DropItem "DemonAmmo" 160
-	DropItem "NewCell" 256
-	DropItem "NewCellPack" 128
-	DropItem "DemonTechRifle" 100 1
-	DropItem "CFRailgun" 60 1
-	SeeSound "DarkHellRazer/Sight"
-	PainSound "DarkHellRazer/Pain"
-	DeathSound "DarkHellRazer/Death"
-	ActiveSound "DarkHellRazer/Active"
-	Obituary "%o was executed by a Dark Hell Razer."
-	Species "Imps"
-	Tag "$NEDHellRaz"
-	var int user_lowlag;
-	MONSTER
-	States
-	{
-	Spawn:
+ Health 380
+ Radius 20
+ Height 56
+ Mass 100
+ Speed 8
+ Scale 1.1
+ PainChance 50
+ +FLOORCLIP
+ +DONTHARMSPECIES
+ +MISSILEMORE
+ +MISSILEEVENMORE
+ DamageFactor "ImpComet", 0.0
+ DropItem "LifeEssence" 256
+ DropItem "ArmorBonusMax" 256
+ DropItem "BossLifeEssence" 120
+ DropItem "BossArmorBonusMax" 120
+ DropItem "DemonAmmo" 160
+ DropItem "NewCell" 256
+ DropItem "NewCellPack" 128
+ DropItem "DemonTechRifleGiver" 100 1
+ DropItem "CFRailgunGiver" 60 1
+ SeeSound "DarkHellRazer/Sight"
+ PainSound "DarkHellRazer/Pain"
+ DeathSound "DarkHellRazer/Death"
+ ActiveSound "DarkHellRazer/Active"
+ Obituary "%o was executed by a Dark Hell Razer."
+ Species "Imps"
+ Tag "$NEDHellRaz"
+ var int user_lowlag;
+ MONSTER
+ States
+ {
+  Spawn:
 	TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ModifyMonster",0,1)
 	Goto Idle
   Idle:

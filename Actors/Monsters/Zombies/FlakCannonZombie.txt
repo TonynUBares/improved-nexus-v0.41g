@@ -16,7 +16,7 @@ DropItem "MineAmmo" 200 1
 DropItem "MineAmmo" 100 1
 DropItem "NewShell" 256
 DropItem "Missile" 256
-DropItem "Flak Cannon" 50 1
+DropItem "FlakCannonGiver" 50 1
 DropItem "BackPack" 155 1
 DropItem "NewShellBox" 138
 DropItem "MissileBox" 138

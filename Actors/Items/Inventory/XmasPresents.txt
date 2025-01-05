@@ -1127,7 +1127,7 @@ Dropitem "LegendaryBulletBox", 256, 33
 Dropitem "LDemonAmmoBox", 256, 32
 Dropitem "TrueLegendaryCell", 256, 10
 Dropitem "TrueLegendaryCellPack", 256, 5
-Dropitem "Legendary C4", 256, 2
+Dropitem "LegendaryC4giver", 256, 2
 Dropitem "LegendaryFusionCell", 256, 1
 }
 

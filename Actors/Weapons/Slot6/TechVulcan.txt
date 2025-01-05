@@ -4,10 +4,10 @@ Actor TechVulcanGiver : CustomInventory
   Inventory.Amount 1
   Inventory.MaxAmount 0
   Inventory.InterHubAmount 0
-  Inventory.PickupMessage "Tech Vulcan"
+  Inventory.PickupMessage "$NETVulcPick"
   Inventory.PickupSound "vulcan/pickup"
   Obituary "%o got plasmaficated by %k's Tech Vulcan"
-  Tag "Tech Vulcan"
+  Tag "$NETVulc"
   States
   {
   Spawn:
@@ -16,9 +16,9 @@ Actor TechVulcanGiver : CustomInventory
 	VULC Z -1
 	Loop
   Pickup:
-	TNT1 A 0 A_JumpIfInventory("Tech Vulcan",1,"JustAmmo")
+	TNT1 A 0 A_JumpIfInventory("TechVulcan",1,"JustAmmo")
   All:
-	TNT1 A 0 A_GiveInventory("Tech Vulcan",1)
+	TNT1 A 0 A_GiveInventory("TechVulcan",1)
 	TNT1 A 0 A_JumpIfInventory("TechVulcanGiverCheck",1,"HoldAndDestroy")
 	TNT1 A 0 A_GiveInventory("TechVulcanGiverCheck",1)
 	TNT1 A 0 A_GiveInventory("DemonAmmo",40)
@@ -27,7 +27,7 @@ Actor TechVulcanGiver : CustomInventory
     TNT1 A 0 A_JumpIfInventory("TechVulcanGiverCheck",1,"Null")
 	TNT1 A 0 A_GiveInventory("TechVulcanGiverCheck",1)
 	TNT1 A 0 A_GiveInventory("DemonAmmo",40)
-	TNT1 A 0 A_SpawnItemEx("Tech Vulcan")
+	TNT1 A 0 A_SpawnItemEx("TechVulcan")
 	Stop
   }
 }
@@ -48,9 +48,9 @@ Actor TechVulcanGiverCheck : Inventory { Inventory.Amount 1 Inventory.MaxAmount 
 
 
 
-Actor "Tech Vulcan" : Weapon
+Actor TechVulcan : Weapon
 {
-  Tag "Tech Vulcan"
+  Tag "$NETVulc"
   Weapon.Selectionorder 4050
   Weapon.KickBack 100
   Weapon.AmmoType "DemonAmmo"
@@ -61,7 +61,7 @@ Actor "Tech Vulcan" : Weapon
   Weapon.SlotNumber 6
   Weapon.SlotPriority 2.1
   Weapon.PreferredSkin "Minigun-Marine"
-  Inventory.PickupMessage "Tech Vulcan"
+  Inventory.PickupMessage "$NETVulcPick"
   Inventory.PickupSound "vulcan/pickup"
   Weapon.Upsound "vulcan/pickup"
   Obituary "%o got plasmaficated by %k's Tech Vulcan"

@@ -172,7 +172,7 @@ StatusBar FullScreen, FullScreenOffsets
 	DrawNumber 3, INDEXFONT, Red, Ammo CFMana, -16, -122;
 	DrawNumber 3, INDEXFONT, Green, Ammo CFMana, WhenNotZero , -16, -122;
     }
-  IsSelected "Legendary C4"
+  IsSelected "LegendaryC4"
     {
 	DrawImage "SEWPA0", -80, -53;
      // DrawImage "PUC4A0", -33, -2, CenterBottom; 
@@ -373,7 +373,7 @@ StatusBar FullScreen, FullScreenOffsets
 	DrawNumber 3, INDEXFONT, Green, Ammo NewShell, WhenNotZero, -16, -66;
     }
 
-  IsSelected "Plasma Shotgun"
+  IsSelected "PlasmaShotgun"
     {
 	DrawImage "SEWPA0", -64, -53; 
 	DrawImage "STBEX0", -34, -4, CenterBottom;
@@ -395,7 +395,7 @@ StatusBar FullScreen, FullScreenOffsets
 	DrawNumber 3, INDEXFONT, Red, Ammo NewShell, -16, -66;
 	DrawNumber 3, INDEXFONT, Green, Ammo NewShell, WhenNotZero, -16, -66;
     }
-  IsSelected "Flak Cannon", "Empowered Flak Cannon"
+  IsSelected "FlakCannon", "EmpoweredFlakCannon"
     {
  	DrawImage "SEWPA0", -64, -53; 
  	DrawImage "HFCWZ0", -30, -4, CenterBottom;
@@ -827,7 +827,7 @@ StatusBar FullScreen, FullScreenOffsets
 	DrawNumber 4, INDEXFONT, Red, Ammo NewCell, -16, -80;
 	DrawNumber 4, INDEXFONT, Green, Ammo NewCell, WhenNotZero, -16, -80;
 	}
-  IsSelected "Tech Vulcan"
+  IsSelected "TechVulcan"
 	{
 	DrawImage "SEWPA0", -40, -53;
 	DrawImage "VULCZ0", -30, -3, CenterBottom;
@@ -903,7 +903,7 @@ StatusBar FullScreen, FullScreenOffsets
 	DrawNumber 4, INDEXFONT, Red, Ammo NewCell, -16, -80;
 	DrawNumber 4, INDEXFONT, Green, Ammo NewCell, WhenNotZero, -16, -80;
 	}
-  IsSelected "Tech Blaster"
+  IsSelected "TechBlaster"
 	{
 	DrawImage "SEWPA0", -40, -53;
 	DrawImage "DTNGA0", -30, -3, CenterBottom;
@@ -1524,50 +1524,154 @@ StatusBar FullScreen, FullScreenOffsets
 	  InInventory SalvationCoolDown { DrawNumber 3,  INDEXFONT, White, SalvationCoolDown, alignment(right), 22, 48; }
 	}
   InInventory PowerWeaponLevel2Complex { DrawImage "MINSY0", 12, 79, CenterBottom, 20, 20; DrawNumber 3,  INDEXFONT, White, PowerupTime SphereofPowerGiver, alignment(right), 22, 73; }
-  InInventory SkullofPower
+	InInventory SkullofPower
 	{
-	  DrawImage "INSKA0", 12, 104, CenterBottom, 20, 20;
+	  InInventory SkullofPowerUpgraded
+	  {
+		InInventory SkullOn
+		{
+		  InInventory SkullPower, 3 { DrawImage "INSKF0", 12, 104, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INSKH0", 12, 104, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory SkullPower, 45 { DrawImage "INSKE0", 12, 104, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INSKG0", 12, 104, CenterBottom, 20, 20; } //Charging
+		}
+	  }
+	  Else
+	  {
+		InInventory SkullOn
+		{
+		  InInventory SkullPower, 3 { DrawImage "INSKB0", 12, 104, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INSKD0", 12, 104, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory SkullPower, 30 { DrawImage "INSKA0", 12, 104, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INSKC0", 12, 104, CenterBottom, 20, 20; } //Charging
+		}
+	  }
 	  DrawNumber 3,  INDEXFONT, White, SkullPower, alignment(right), 22, 98;
 	}
-  InInventory CFSpreadRune { DrawImage "SPRRZ0", 12, 129, CenterBottom, 25, 25; DrawNumber 3,  INDEXFONT, White, SpreadRunePower, alignment(right), 22, 123; }
-  InInventory RespawnPointCooldown { DrawImage "RP_ICON", 12, 194, CenterBottom, 20, 20; DrawNumber 3,  INDEXFONT, White, PowerupTime RespawnPointCooldownGiver, alignment(right), 22, 188; }
-  InInventory RespawnPointRespawnCooldown { DrawImage "RP_ICON", 12, 194, CenterBottom, 20, 20; DrawNumber 3,  INDEXFONT, White, PowerupTime RespawnPointRespawnCooldownGiver, alignment(right), 22, 188; }
-  InInventory PowerInvulnerable
+	InInventory DemonicChalice
 	{
-	  DrawImage "PINVY0", 12, 179, CenterBottom, 20, 20;
-	  DrawNumber 3,  INDEXFONT, White, PowerupTime FakeInvulnerabilitySphere, alignment(right), 22, 173;
+	  InInventory DemonicChaliceUpgraded
+	  {
+		InInventory ChaliceOn
+		{
+		  InInventory ChalicePower, 3 { DrawImage "INIMF0", 12, 129, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INIMH0", 12, 129, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory ChalicePower, 25 { DrawImage "INIME0", 12, 129, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INIMG0", 12, 129, CenterBottom, 20, 20; } //Charging
+		}
+	  }
+	  Else
+	  {
+		InInventory ChaliceOn
+		{
+		  InInventory ChalicePower, 3 { DrawImage "INIMB0", 12, 129, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INIMD0", 12, 129, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory ChalicePower, 15 { DrawImage "INIMA0", 12, 129, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INIMC0", 12, 129, CenterBottom, 20, 20; } //Charging
+		}
+	  }
+	  DrawNumber 3,  INDEXFONT, White, ChalicePower, alignment(right), 22, 123;
 	}
-  InInventory PowerInvisibility
+	InInventory CFSpreadRune
 	{
-	  DrawImage "PINSY0", 12, 204, CenterBottom, 20, 20;
-	  DrawNumber 3,  INDEXFONT, White, PowerupTime FakeBlurSphere, alignment(right), 22, 198;
+	  InInventory SpreadRuneUpgraded
+	  {
+		InInventory SpreadRuneOn
+		{
+		  InInventory SpreadRunePower, 3 { DrawImage "INSRF0", 12, 154, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INSRH0", 12, 154, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory SpreadRunePower, 45 { DrawImage "INSRE0", 12, 154, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INSRG0", 12, 154, CenterBottom, 20, 20; } //Charging
+		}
+	  }
+	  Else
+	  {
+		InInventory SpreadRuneOn
+		{
+		  InInventory SpreadRunePower, 3 { DrawImage "INSRB0", 12, 154, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INSRD0", 12, 154, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory SpreadRunePower, 30 { DrawImage "INSRA0", 12, 154, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INSRC0", 12, 154, CenterBottom, 20, 20; } //Charging
+		}
+	  }
+	  DrawNumber 3,  INDEXFONT, White, SpreadRunePower, alignment(right), 22, 148;
 	}
-  InInventory AmpGoggles
+	InInventory AmpGoggles
 	{
-	  DrawImage "PVISA0", 12, 219, CenterBottom, 20, 20;
-	  DrawNumber 3,  INDEXFONT, White, AmpPower, alignment(right), 22, 213;
+	  InInventory AmpGogglesUpgraded
+	  {
+		InInventory AmpOn
+		{
+		  InInventory AmpPower, 3 { DrawImage "INVIF0", 12, 169, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INVIH0", 12, 169, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory AmpPower, 180 { DrawImage "INVIE0", 12, 169, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INVIG0", 12, 169, CenterBottom, 20, 20; } //Charging
+		}
+	  }
+	  Else
+	  {
+		InInventory AmpOn
+		{
+		  InInventory AmpPower, 3 { DrawImage "INVIB0", 12, 169, CenterBottom, 20, 20; } //Active
+		  Else { DrawImage "INVID0", 12, 169, CenterBottom, 20, 20; } //Running out of power
+		}
+		Else
+		{
+		  InInventory AmpPower, 120 { DrawImage "INVIA0", 12, 169, CenterBottom, 20, 20; } //Full power
+		  Else { DrawImage "INVIC0", 12, 169, CenterBottom, 20, 20; } //Charging
+		}
+	  }
+	  DrawNumber 3,  INDEXFONT, White, AmpPower, alignment(right), 22, 163;
 	}
-  InInventory PowerHellionRegen
+	InInventory RespawnPointCooldown { DrawImage "RP_ICON", 12, 194, CenterBottom, 20, 20; DrawNumber 3,  INDEXFONT, White, PowerupTime RespawnPointCooldownGiver, alignment(right), 22, 188; }
+	InInventory RespawnPointRespawnCooldown { DrawImage "RP_ICON", 12, 194, CenterBottom, 20, 20; DrawNumber 3,  INDEXFONT, White, PowerupTime RespawnPointRespawnCooldownGiver, alignment(right), 22, 188; }
+	InInventory PowerInvulnerable
 	{
-	  DrawImage "HRGNZ0", 12, 244, CenterBottom, 20, 20;
-	  DrawNumber 3,  INDEXFONT, White, PowerupTime HellionRegenGiver, alignment(right), 12, 238;
+	  DrawImage "PINVY0", 12, 219, CenterBottom, 20, 20;
+	  DrawNumber 3,  INDEXFONT, White, PowerupTime FakeInvulnerabilitySphere, alignment(right), 22, 213;
+	}
+	InInventory PowerInvisibility
+	{
+	  DrawImage "PINSY0", 12, 244, CenterBottom, 20, 20;
+	  DrawNumber 3,  INDEXFONT, White, PowerupTime FakeBlurSphere, alignment(right), 22, 238;
+	}
+	InInventory PowerHellionRegen
+	{
+	  DrawImage "HRGNZ0", 12, 269, CenterBottom, 20, 20;
+	  DrawNumber 2,  INDEXFONT, White, PowerupTime HellionRegenGiver, alignment(right), 22, 263;
 	}
 /*  InInventory PowerIronMaiden
 	{
 	  DrawImage "TALIZ0", 37, 54, CenterBottom, 20, 20;
 	  DrawNumber 3,  INDEXFONT, White, PowerupTime IronMaidenGiver, alignment(right), 47, 48;
 	}*/
-  InInventory PowerPentagram
+	InInventory PentagramofPower
 	{
-	  DrawImage "PNTCZ0", 37, 79, CenterBottom, 20, 20;
-	  DrawNumber 3,  INDEXFONT, White, PowerupTime PentagramGiver, alignment(right), 47, 73;
+	  DrawImage "PNTCZ0", 12, 294, CenterBottom, 20, 20;
+	  DrawNumber 3,  INDEXFONT, White, PentagramPower, alignment(right), 22, 288;
 	}
-  InInventory DemonicChalice
-	{
-	  DrawImage "INIMA0", 37, 104, CenterBottom, 20, 20;
-	  DrawNumber 3,  INDEXFONT, White, ChalicePower, alignment(right), 47, 98;
-	}
-	InInventory PowerEmpowermentStone1
+  InInventory PowerEmpowermentStone1
 	{
 	  DrawImage "WEA9A0", 12, 319, CenterBottom, 20, 20;
 	  DrawNumber 2,  INDEXFONT, White, EmpowermentStoneTimer, alignment(right), 22, 313;
@@ -1587,24 +1691,24 @@ StatusBar FullScreen, FullScreenOffsets
   DrawImage "CFARMO00", -14, -261, CenterBottom, 20, 20;		
   DrawNumber 3,  INDEXFONT, White, ArmorPool, alignment(center), -14, -267;
 																  
-  InInventory NemesisRuneToken, 1
+	InInventory NemesisRuneToken, 1
 	{
-	  DrawImage "NMRNA0", 25, -58, CenterBottom, 0, 15;
-	  InInventory PowerPWSCoolDown, 1
+													
+	  InInventory PWSCooldown
 	  {
-		DrawImage "PowerWS2", -12, -280, CenterBottom, 20, 20;
-		DrawNumber 3,  INDEXFONT, White, PowerupTime PWSCooldownGiver, alignment(right), -4, -286;
+	    DrawImage "PowerWS2", -12, -280, CenterBottom, 20, 20;
+	    DrawNumber 3,  INDEXFONT, White, PWSCooldown, alignment(right), -4, -286;
 	  }
 	}
-  InInventory PWKToken
+	InInventory PWKToken
 	{
-	  InInventory PowerPWKCoolDown, 1
+	  InInventory PWKCoolDown, 1
 	  {
-		DrawImage "PowerWK2", -12, -305, CenterBottom, 20, 20;
-		DrawNumber 3,  INDEXFONT, White, PowerupTime PWKCooldownGiver, alignment(right), -4, -311;
+	    DrawImage "PowerWK2", -12, -305, CenterBottom, 20, 20;
+	    DrawNumber 3,  INDEXFONT, White, PWKCooldown, alignment(right), -4, -311;
+	
 	  }
 	}
-
   //HDAN - Hearts
   InInventory DemonHeart { DrawImage "DMNHRT", 30, 54, CenterBottom, 25, 25; }
   InInventory LegendaryDemonHeart { DrawImage "LEDMNHRT", 30, 54, CenterBottom, 25, 25; }
@@ -1911,7 +2015,7 @@ StatusBar normal, forcescaled
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
 	DrawNumber 2, NEWFONT, Gold, Ammo1, WhenNotZero, 110, 330, 0, Red, 2, Green, 6;
     }
-  IsSelected "Plasma Shotgun"
+  IsSelected "PlasmaShotgun"
     {
 	DrawImage "SEWBB0", 231, 340;
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
@@ -1929,7 +2033,7 @@ StatusBar normal, forcescaled
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
 	DrawNumber 3, NEWFONT, Gold, Ammo1, WhenNotZero, 110, 330, 0, Red, 1, Green, 2;
     }
-  IsSelected "Flak Cannon", "Empowered Flak Cannon"
+  IsSelected "FlakCannon", "EmpoweredFlakCannon"
     { //where to put ammo 2?
 	DrawImage "SEWBB0", 231, 323;
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
@@ -2251,7 +2355,7 @@ StatusBar normal, forcescaled
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
 	DrawNumber 3, NEWFONT, Gold, Ammo1, WhenNotZero, 110, 330, 0, Red, 40, Green, 81;
     }
-  IsSelected "Tech Vulcan"
+  IsSelected "TechVulcan"
     {
 	DrawImage "SEWBB0", 231, 340;
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
@@ -2299,7 +2403,7 @@ StatusBar normal, forcescaled
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
 	DrawNumber 3, NEWFONT, Gold, Ammo1, WhenNotZero, 110, 330, 0, Red, 10, Green, 21;
     }
-  IsSelected "Tech Blaster"
+  IsSelected "TechBlaster"
     {
 	DrawImage "SEWBB0", 231, 340;
 	DrawNumber 3, NEWFONT, DarkGrey, Ammo1, 110, 330, 0;
