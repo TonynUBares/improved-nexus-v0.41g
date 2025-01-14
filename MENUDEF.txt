@@ -75,10 +75,57 @@ OptionMenu "OptionsCF"
 	StaticText " "
 	SubMenu "$NexusOptions","NXOptions"
 	StaticText " "
+	SubMenu "$AntilagOptions","ttkALOptions"
+	StaticText " "
 }
 
 
 
+OptionMenu "ttkALOptions"
+{
+    Title "$AntilagOptions"
+    
+	StaticText " "
+	Option "$ttkALOption","ttk_antilag","ttklagoptions"
+	StaticText " "
+	StaticText "$ttkALOpt01"
+	StaticText "$ttkALOpt02"
+	StaticText "$ttkALOpt03"
+	StaticText " "
+	StaticText "$ttkALOpt04"
+	StaticText "$ttkALOpt05"
+	StaticText " "
+	StaticText "$ttkALOpt06"
+	StaticText " "
+	StaticText "$ttkALOpt07"
+	StaticText " "
+	StaticText "$ttkALOpt08"
+	StaticText "$ttkALOpt09"
+	StaticText " "
+	StaticText "$ttkALOpt10"
+	StaticText "$ttkALOpt11"
+	StaticText " "
+	StaticText "$ttkALOpt12"
+	StaticText "$ttkALOpt13"
+	StaticText " "
+	StaticText "$ttkALOpt14"
+	StaticText "$ttkALOpt15"
+	StaticText " "
+	StaticText "$ttkALOpt16"
+	StaticText "$ttkALOpt17"
+	StaticText " "
+}
+
+OptionValue "ttklagoptions"
+{
+ -1, "Disabled"
+ 0, "Off"
+ 1, "Light"
+ 2, "Medium"
+ 3, "Heavy"
+ 4, "Extreme"
+ 5, "Why are you playing Sunder?!"
+}
 
 OptionMenu "NXOptions"
 {

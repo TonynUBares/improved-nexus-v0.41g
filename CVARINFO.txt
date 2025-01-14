@@ -14,3 +14,4 @@ server int kazumi_nukechoker = 1;
 
 server int txs_noatomic = 0;
 server int txs_noshufflecrates = 0;
+server int ttk_antilag = 0;

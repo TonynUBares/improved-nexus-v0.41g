@@ -11,6 +11,27 @@ NXPresents = "\cfUse All Presents in inventory";
 NXPresents1 = "\cgIt's the most wonderful time of the year!";
 NXDropHeart = "\cfDrop Current Demon Heart";
 
+
+AntilagOptions = "Anti-lag Options";
+ttkALOption = "\cfLag amount";
+ttkALOpt01 = "\cuThis option enables extra anti-lag features:";
+ttkALOpt02 = "\cuit makes out-of-sight monsters act slower and it also";
+ttkALOpt03 = "\cumakes their corpses become invisible after some time.";
+ttkALOpt04 = "\cuTune it from \cgLight\cu to \cgSunder\cu based on your";
+ttkALOpt05 = "\cupreference or on the amount of lag you are experiencing.";
+ttkALOpt06 = "\ckDisable\cu turns the script off. \cgRequire a map restart";
+ttkALOpt07 = "\ckOff\cu turns the option temporarily off.";
+ttkALOpt08 = "\cvLight:\cu monsters act at 10 frames per tic";
+ttkALOpt09 = "\cucorpses will become invisible after 5 minutes.";
+ttkALOpt10 = "\cfMedium:\cu monsters act at 15 frames per tic";
+ttkALOpt11 = "\cucorpses will become invisible after 4 minutes.";
+ttkALOpt12 = "\chHeavy:\cu monsters act at 20 frames per tic";
+ttkALOpt13 = "\cucorpses will become invisible after 3 minutes.";
+ttkALOpt14 = "\cgExtreme:\cu monsters act at 25 frames per tic";
+ttkALOpt15 = "\cucorpses will become invisible after 2 minutes.";
+ttkALOpt16 = "\cmSunder:\cu monsters act at 30 frames per tic";
+ttkALOpt17 = "\cucorpses will become invisible after 1 minute.";
+
 NXOptionFirstLongTitleDamn = "\cfStarting Health and Armor";
 NXOptO011 = "\cuStart with 250/250 health and armor.";
 

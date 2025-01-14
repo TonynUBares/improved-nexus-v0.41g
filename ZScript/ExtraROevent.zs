@@ -19,4 +19,10 @@ class ExtraROevent : EventHandler
 
   e.IsFinal = true;
  }
+
+ Override void WorldThingSpawned(WorldEvent e)
+ {
+  string lagitem = "ttkAntiLag"; 
+  if(e.thing && e.thing.bISMONSTER && e.thing.health < 2000000) {e.thing.GiveInventory(lagitem,1);}
+ }
 }
