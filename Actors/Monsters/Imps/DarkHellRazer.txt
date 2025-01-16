@@ -20,7 +20,7 @@ ACTOR DarkHellRazer 21543
  DropItem "NewCell" 256
  DropItem "NewCellPack" 128
  DropItem "DemonTechRifleGiver" 100 1
- DropItem "CFRailgunGiver" 60 1
+ DropItem "RailgunGiver" 60 1
  SeeSound "DarkHellRazer/Sight"
  PainSound "DarkHellRazer/Pain"
  DeathSound "DarkHellRazer/Death"

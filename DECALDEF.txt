@@ -546,7 +546,7 @@ generator StingrayShot			StingShotScorch
 generator BLGSuperLightningBall	BLGBallScorch
 generator BLGSeeker				BLGSeekerScorch
 
-generator "Flak Cannon"			FlakChip
+generator "FlakCannon"			FlakChip
 generator NHSFlakSlug			FadingScorch
 
 
