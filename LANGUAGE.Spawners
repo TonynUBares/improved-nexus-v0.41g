@@ -42,7 +42,7 @@ ShotgunGuy5 = "SpecOpsShotgunner";		ShotgunGuy5Chance = 15;
 ShotgunGuy6 = "MRLZombie";			ShotgunGuy6Chance = 15;
 ShotgunGuy7 = "HomingRocketZombie";		ShotgunGuy7Chance = 12;
 ShotgunGuy8 = "ExplosiveShotgunZombie";		ShotgunGuy8Chance = 11;
-ShotgunGuy9 = "Hexa-ShotgunZombie";		ShotgunGuy9Chance = 11;
+ShotgunGuy9 = "HexaShotgunZombie";		ShotgunGuy9Chance = 11;
 ShotgunGuy10 = "EraserZombie";			ShotgunGuy10Chance = 11;
 ShotgunGuy11 = "ShotgunCommando";		ShotgunGuy11Chance = 11;
 ShotgunGuy12 = "InsaneSergeant";		ShotgunGuy12Chance = 9;
