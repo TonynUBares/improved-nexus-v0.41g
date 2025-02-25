@@ -1,15 +1,15 @@
 Actor LegendaryBehemothCannonGiver : CustomInventory
 {
-  Scale 0.9
-  Inventory.Amount 1
-  Inventory.MaxAmount 0
-  Inventory.InterHubAmount 0
-   Inventory.PickupMessage "Legendary Behemoth Cannon, B.I.H Legendary Behemoth ;-D"
-   Inventory.PickupSound "LegBeheCannon/up"
-   Obituary "%o ate %k's Legendary Behemoth Cannon beautiful comets."
-   Tag "Legendary Behemoth Cannon"
-  States
-  {
+ Scale 0.9
+ Inventory.Amount 1
+ Inventory.MaxAmount 0
+ Inventory.InterHubAmount 0
+ Inventory.PickupMessage "$NELegbehePick"
+ Inventory.PickupSound "LegBeheCannon/up"
+ Obituary "$NELegbeheObit"
+ Tag "$NELegbehe"
+ States
+ {
   Spawn:
 	LBHC H 0 NoDelay ACS_NamedExecuteWithResult("WeaponListCheck",5,1)
   SpawnLoop:
@@ -48,7 +48,7 @@ Actor LegendaryBehemothCannonGiverCheck : Inventory { Inventory.Amount 1 Invento
 
 
 
-ACTOR LegendaryBehemothCannon : Weapon
+ACTOR LegendaryBehemothCannon: Weapon
 {
  Weapon.Kickback 300
  Weapon.AmmoUse 6
@@ -61,10 +61,10 @@ ACTOR LegendaryBehemothCannon : Weapon
  Weapon.AmmoType "LDemonAmmo"   
  Weapon.AmmoUse2 36
  Weapon.AmmoType2 "LDemonAmmo"    
- Inventory.PickupMessage "Legendary Behemoth Cannon, B.I.H Legendary Behemoth ;-D"
+ Inventory.PickupMessage "$NELegbehePick"
  Inventory.PickupSound "LegBeheCannon/up"
- Obituary "%o ate %k's Legendary Behemoth Cannon beautiful comets."
- Tag "Legendary Behemoth Cannon"
+ Obituary "$NELegbeheObit"
+ Tag "$NELegbehe"
  Weapon.Upsound "LegBeheCannon/up"
  States
  {

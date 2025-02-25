@@ -3,7 +3,7 @@ ACTOR ArmorParticleGreenSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("ArmorParticleGreen",random(-12,12),random(-12,12),random(0,24),random(-2,2),random(-2,2),random(0,2),random(-20,20),SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -17,7 +17,7 @@ ACTOR ArmorParticleGreen : BFGTrailParticleGreen
  {
   Spawn:
 	TNT1 A 0
-	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	LS3B A 2 Bright A_FadeOut(0.015)
 	Loop
  }
@@ -29,7 +29,7 @@ ACTOR BlackGreenSparkSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("BlackGreenSpark",random(-12,12),random(-12,12),random(2,16),frandom(-0.4,0.4),frandom(-0.4,0.4),frandom(0,2),0,SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -60,7 +60,7 @@ ACTOR ArmorParticleWhiteSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("ArmorParticleWhite",random(-12,12),random(-12,12),random(0,24),random(-2,2),random(-2,2),random(0,2),random(-20,20),SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -73,7 +73,7 @@ ACTOR ArmorParticleWhite : BFGTrailParticleGreen
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	LS4B A 2 Bright A_FadeOut(0.015)
 	Loop
  }
@@ -85,7 +85,7 @@ ACTOR ArmorParticleRedSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("ArmorParticleRed",random(-12,12),random(-12,12),random(0,24),random(-2,2),random(-2,2),random(0,2),random(-20,20),SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -98,7 +98,7 @@ ACTOR ArmorParticleRed : BFGTrailParticleGreen
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	LS5B A 2 Bright A_FadeOut(0.015)
 	Loop
  }
@@ -110,7 +110,7 @@ ACTOR LightGreenSparkSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("LightGreenSpark",random(-12,12),random(-12,12),random(2,16),frandom(-0.4,0.4),frandom(-0.4,0.4),frandom(0,2),0,SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -140,7 +140,7 @@ ACTOR ArmorParticleYellowSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("ArmorParticleYellow",random(-12,12),random(-12,12),random(0,24),random(-2,2),random(-2,2),random(0,2),random(-20,20),SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -154,7 +154,7 @@ ACTOR ArmorParticleYellow : BFGTrailParticleGreen
  {
   Spawn:
 	TNT1 A 0
-	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	LS6B A 2 Bright A_FadeOut(0.015)
 	Loop
  }
@@ -166,7 +166,7 @@ ACTOR TrueLegSparkSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("TrueLegSpark",random(-12,12),random(-12,12),random(2,16),frandom(-0.4,0.4),frandom(-0.4,0.4),frandom(0,2),0,SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -181,7 +181,7 @@ Actor TrueLegSpark: LegArmorSpark
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 A 0 A_SetScale(frandom(0.3,0.6))
 	TNT1 A 0 A_SetUserVar(user_delay,random(2,4))
 	SPX8 ABCDEF 1 A_SetTics(user_delay)
@@ -195,7 +195,7 @@ ACTOR ArmorParticleGoldSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("ArmorParticleGold",random(-12,12),random(-12,12),random(0,24),random(-2,2),random(-2,2),random(0,2),random(-20,20),SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -209,7 +209,7 @@ ACTOR ArmorParticleGold : BFGTrailParticleGreen
  {
   Spawn:
 	TNT1 A 0
-	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	LS7B A 2 Bright A_FadeOut(0.015)
 	Loop
  }
@@ -221,7 +221,7 @@ ACTOR ArmorParticlePurpleSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("ArmorParticlePurple",random(-12,12),random(-12,12),random(0,24),random(-2,2),random(-2,2),random(0,2),random(-20,20),SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -235,7 +235,7 @@ ACTOR ArmorParticlePurple : BFGTrailParticleGreen
  {
   Spawn:
 	TNT1 A 0
-	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	LS8B A 2 Bright A_FadeOut(0.015)
 	Loop
  }
@@ -248,7 +248,7 @@ ACTOR SNArmorFireSpawner : BluePowerLineSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 A 1 A_SpawnItemEx("SNArmorFire",random(12,-12),random(15,-15),0,0,0,2,0,128,0) 
 	Stop
  }
@@ -292,7 +292,7 @@ ACTOR LegendaryRedSparkleSpawner : redSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 2 A_SpawnItemEx("LegendaryRedStar", random(-15, 15), random(-15, 15), random(0, 16), 0, 0, 0, 0, 128)
 	Stop
  }
@@ -306,7 +306,7 @@ ACTOR LegendaryOrangeSparkleSpawner : OrangeSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 2 A_SpawnItemEx("LegendaryOrangeStar", random(-15, 15), random(-15, 15), random(0, 16), 0, 0, 0, 0, 128)
 	Stop
  }
@@ -344,7 +344,7 @@ ACTOR CFSPLineSpawner : LegImpLineSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AAA 0 A_CustomMissile("NemesisHellionSmokeSpawner",0,0,random(0,-360),2,random(0,360))
 	TNT1 AAAAAAA 0 A_SpawnItemEx("WhitePowerLine",random(32,-32),random(32,-32),random(8,48),0,0,random(1,4),0,128,0) 	
 	TNT1 A 1 A_SpawnItemEx("WhitePowerLine",random(32,-32),random(32,-32),random(8,48),0,0,random(1,4),0,128,0) 
@@ -359,7 +359,7 @@ ACTOR NemesisPowerShardEffects : RedSparkleSpawner
 States
 {
  Pickup:
-	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 A 0 A_CustomMissile("NBlackSparkleSpawner",0,0,frandom(0,-360),2,frandom(0,360))
 	TNT1 AA 3 A_SpawnItemEx("NBlackPowerLineSpawner",frandom(32,-32),frandom(32,-32),frandom(8,48),0,0,random(1,4),0,128,0)
 	Stop
@@ -371,7 +371,7 @@ ACTOR NBlackSparkleSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 2 A_SpawnItemEx("NBlackStar", frandom(-15, 15), frandom(-15, 15), frandom(28, 44), 0, 0, 0, 0, 128) 
 	Stop
  }
@@ -406,7 +406,7 @@ ACTOR NBlackPowerLineSpawner : BluePowerLineSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 A 1 A_SpawnItemEx("NBlackPowerLine",frandom(12,-12),frandom(12,-12),0,0,0,2,0,128,0) 
     Stop  
  }
@@ -470,7 +470,7 @@ ACTOR SNSphereFlameSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AAAAAA 0 A_SpawnItemEx("SNSphereFlame",random(20,-20),random(20,-20),random(20,40),0,0,random(2,6),0,128,0)
 	TNT1 A 0
 	Stop
@@ -499,7 +499,7 @@ ACTOR NemesisSparkleSpawner2 : BlueSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 2 A_SpawnItemEx("BlackStar2", frandom(-15, 15), frandom(-15, 15), frandom(28, 44), 0, 0, 0, 0, 128)
         Stop
  }
@@ -519,7 +519,7 @@ ACTOR UraniumSparkleSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 2 A_SpawnItemEx("UraniumStar", random(-15, 15), frandom(-15, 15), frandom(28, 44), 0, 0, 0, 0, 128) 
 	Stop
  }
@@ -536,7 +536,7 @@ ACTOR UraniumSphereFlare : BlueSphereFlare
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	LENU A 1 Bright
 	Stop
  }
@@ -560,7 +560,7 @@ ACTOR AWhiteSparkleSpawner : WhiteSparkleSpawner
 States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 2 A_SpawnItemEx("AWhiteStar", frandom(-15, 15), frandom(-15, 15), frandom(28, 44), 0, 0, 0, 0, 128) 
         Stop
  }
@@ -623,7 +623,7 @@ ACTOR AscensionSparkSpawner : WhiteSparkleSpawner
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 AA 0 A_SpawnItemEx("AscensionSpark",random(-12,12),random(-12,12),random(2,16),frandom(-0.4,0.4),frandom(-0.4,0.4),frandom(0,2),0,SXF_CLIENTSIDE,64)
 	Stop
  }
@@ -640,7 +640,7 @@ Actor AscensionSpark
  States
  {
   Spawn:
-	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Vanilla")
+	TNT1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("CheckVanilla") == 1, "Null")
 	TNT1 A 0 A_SetScale(frandom(0.3,0.6))
 	TNT1 A 0 A_SetUserVar(user_delay,random(2,4))
 	SPX7 ABCDEF 1 A_SetTics(user_delay)
