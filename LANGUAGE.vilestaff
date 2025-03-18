@@ -130,6 +130,8 @@ VileStaff0525 = "Freezemotaur";
 VileStaff0526 = "Hellsmith";
 VileStaff0527 = "NemHellsmith";
 
+VileStaff0528 = "TransparentLoper";
+
 
 ///////// Prefix==VileStaff1   Content==Sprite,Tag
 
@@ -179,7 +181,7 @@ VileStaff1454 = "HRZRA0,NEHellRaz";
 VileStaff1455 = "SAIMA0,NESabot";
 
 VileStaff1456 = "CYASA0,NECybAssault";
-VileStaff1457 = "HPALA0,NEPalad";
+VileStaff1457 = "HPALA0,NEPalad";
 VileStaff1458 = "VNBLA0,NEVexArchon";
 
 VileStaff1459 = "VLSNA0,NEVexSent";
@@ -262,3 +264,5 @@ VileStaff1524 = "SMT3A0,NEFakeSuprem";
 VileStaff1525 = "FREZA0,NEFrMotaur";
 VileStaff1526 = "BSMTA0,NEHSmith";
 VileStaff1527 = "NHTHA0,NENemHSmith";
+
+VileStaff1528 = "LMLON0,NETrLoperC";

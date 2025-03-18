@@ -12,3 +12,6 @@ Fixes up to version 0.42:
 - Fixed Abbandine missing XDeath and XRaise
 - Fixed DarkVile's DarkThunderBolt and ThunderRunner getting stuck and not dying
 - NemesisSentient's missing user_variables
+- Fixed TransparentLoper not in the VileStaff list
+- Fixed Paladin in the Vilestaff list (extra character)
+- Fixed menu conflicts for the AntiLag option

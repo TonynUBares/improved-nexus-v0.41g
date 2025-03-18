@@ -117,6 +117,7 @@ NEVexFiend = "\c[w2]Vexed Nemesis Archfiend\c-";
 NENemChain = "\c[v9]Nemesis Chainsaw Zombie\c-";
 NEVexChain = "\c[w2]vexed Nemesis Chainsaw Zombie\c-";
 NELoperC = "\c[m8]Loper\c-";
+NETrLoperC = "\c[m8]Transparent Loper\c-";
 NELegBehKami = "\c[z3]Legendary Beheaded Kamikaze\c-";
 
 //Revenants

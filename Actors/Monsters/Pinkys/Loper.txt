@@ -28,10 +28,10 @@ actor LoperComplex 27806
   States
   {
   Spawn:
-	TNT1 A 0 NoDelay ACS_NamedExecuteAlways("ModifyMonster",0,1)
+	LMLO A 0 NoDelay ACS_NamedExecuteAlways("ModifyMonster",0,1)
 	Goto Idle
   Idle:
-    LMLO N 10 A_Look
+	LMLO N 10 A_Look
 	LMLO Z 10 A_Look
     loop
   See:
@@ -173,5 +173,5 @@ ACTOR TransparentLoper : LoperComplex 21521
 RenderStyle Translucent
 Alpha 0.20
 Obituary "%o was electrically stomped on by an invisible Loper."
-Tag "\c[m8]Transparent Loper\c-"
+Tag "$NETrLoperC"
 }

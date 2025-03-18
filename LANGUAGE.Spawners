@@ -167,7 +167,7 @@ DemonBossCount = 10;
 DemonBoss0 = "";					DemonBoss0Chance = 0;
 DemonBoss1 = "LegendaryFiend";			DemonBoss1Chance = 35;
 DemonBoss2 = "EnragedLegendaryFiend";		DemonBoss2Chance = 27;
-DemonBoss3 = "LegChainsawZombie";		DemonBoss3Chance = 10;
+DemonBoss3 = "LegendaryChainsawZombie";		DemonBoss3Chance = 10;
 DemonBoss4 = "LegendarySuicideBomber";		DemonBoss4Chance = 5;
 DemonBoss5 = "LegendaryBeheadedKamikaze";	DemonBoss5Chance = 5;
 DemonBoss6 = "EnragedLegendarySuicideBomber";	DemonBoss6Chance = 6;
@@ -212,7 +212,7 @@ LostSoul14 = "DTGuardianCube";			LostSoul14Chance = 8;
 LostSoul15 = "PhaseGuardianCube";		LostSoul15Chance = 8;
 LostSoul16 = "CryoSoulEnemy";			LostSoul16Chance = 5;
 LostSoul17 = "PyroSoulEnemy";			LostSoul17Chance = 5;
-LostSoul18 = "AtomicSouly";			LostSoul18Chance = 1;
+LostSoul18 = "AtomicSoul";			LostSoul18Chance = 1;
 
 LostSoulBossCount = 5;
 LostSoulBoss0 = "";				LostSoulBoss0Chance = 0;
@@ -276,11 +276,12 @@ PainElemental12 = "TorturedSoul";			PainElemental12Chance = 18;
 PainElemental13 = "LukewarmElemental";			PainElemental13Chance = 15;
 PainElemental14 = "Carrier";				PainElemental14Chance = 7;
 
-PainElementalBossCount = 4;
+PainElementalBossCount = 5;
 PainElementalBoss0 = "";					PainElementalBoss0Chance = 0;
 PainElementalBoss1 = "LegendaryTormentor";		PainElementalBoss1Chance = 60;
 PainElementalBoss2 = "EnragedLegendaryTormentor";	PainElementalBoss2Chance = 30;
-PainElementalBoss3 = "NemesisTormentor";			PainElementalBoss3Chance = 10;
+PainElementalBoss3 = "NemesisTormentor";			PainElementalBoss3Chance = 9;
+PainElementalBoss5 = "NemesisTormentor";			PainElementalBoss4Chance = 1;
 
 ArachnotronCount = 20;
 Arachnotron0 = "";					Arachnotron0Chance = 0;
@@ -554,7 +555,7 @@ WolfensteinSS12 = "SSDualRocketMan";			WolfensteinSS12Chance = 17;
 WolfensteinSS13 = "Darko";				WolfensteinSS13Chance = 4;
 WolfensteinSS14 = "SSUberSoldierExMinigun";		WolfensteinSS14Chance = 2;
 
-WolfensteinSSBossCount = 10;
+WolfensteinSSBossCount = 8;
 WolfensteinSSBoss0 = "";					WolfensteinSSBoss0Chance = 0;
 WolfensteinSSBoss1 = "Schabbs";				WolfensteinSSBoss1Chance = 8;
 WolfensteinSSBoss2 = "Hitler";				WolfensteinSSBoss2Chance = 24;
@@ -562,7 +563,7 @@ WolfensteinSSBoss3 = "CFDeathKnight";			WolfensteinSSBoss3Chance = 13;
 WolfensteinSSBoss4 = "LegendaryKrieger";			WolfensteinSSBoss4Chance = 17;
 WolfensteinSSBoss5 = "PanzGrosse";			WolfensteinSSBoss5Chance = 8;
 WolfensteinSSBoss6 = "TrueHitler";			WolfensteinSSBoss6Chance = 5;
-WolfensteinSSBoss9 = "IncubusKaiser";			WolfensteinSSBoss9Chance = 8;
+WolfensteinSSBoss7 = "IncubusKaiser";			WolfensteinSSBoss7Chance = 8;
 
 //For weapons the tables they must add up to 300.
 ChainsawCount =  5;
