@@ -14,7 +14,7 @@ ACTOR NukeBarrel : ttkDeadlyBarrel
  States
  {
   Spawn:
-	MEXP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) == 1,"Remove")
+	MEXP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) != 1,"Remove")
   SpawnLoop:
 	MEXP A 35
 	Loop

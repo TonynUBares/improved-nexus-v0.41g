@@ -17,7 +17,7 @@ ACTOR NemesisTechBarrel : ttkDeadlyBarrel
  States
  {
   Spawn:
-	NTBB A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) == 1,"Remove")
+	NTBB A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) != 1,"Remove")
   SpawnLoop:
 	NTBB A 6 Bright A_SpawnItem("NemesisHellionSmokeSpawner",0,0,0,0)
 	Loop

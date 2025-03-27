@@ -75,7 +75,7 @@ ACTOR LegendaryChair 13712
  {
   Spawn:
 	CHAI R 0
-	CHAI R 1 A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",4) == 1 || ACS_NamedExecuteWithResult("GetCVar",52) == 1,"Remove")
+	CHAI R 1 A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",4) == 1 || ACS_NamedExecuteWithResult("GetCVar",52) != 1,"Remove")
   Spawnloop:
 	CHAI R 0
 	TNT1 A 0 ACS_NamedExecuteAlways("WimpyMode",0,2)

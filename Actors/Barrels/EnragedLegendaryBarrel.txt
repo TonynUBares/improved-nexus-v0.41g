@@ -13,7 +13,7 @@ ACTOR EnragedLegendaryBarrel : ModdedExplosiveBarrel
  States
  {
   Spawn:
-	NTBB A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) == 1,"Remove")
+	NTBB A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) != 1,"Remove")
   SpawnLoop:
 	EB4R AB 8 Bright A_SpawnItemEx("EnragedHellionSmokeSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE,64)
 	Loop

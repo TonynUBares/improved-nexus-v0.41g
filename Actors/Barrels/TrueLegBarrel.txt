@@ -8,7 +8,7 @@ ACTOR TrueLegendaryBarrel : LegendaryBarrel
  States
  {
   Spawn:
-	TB4R A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) == 1,"Remove")
+	TB4R A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("GetCVar",52) != 1,"Remove")
   SpawnLoop:
 	TB4R AB 8 Bright A_SpawnItemEx("BHellionSmokeSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE,64)
 	Loop
